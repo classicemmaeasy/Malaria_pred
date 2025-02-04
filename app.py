@@ -74,7 +74,7 @@ for target_column in ['Y1', 'Y2', 'Y3', 'Y4']:  # Replace with your actual targe
         print(f"Model file for {target_column} not found: {model_file}")
 
 # Streamlit app
-st.title("XGBoost Model Prediction")
+st.title("Malaria Burden classification")
 
 # Define the mapping for prediction labels
 prediction_mapping = {
