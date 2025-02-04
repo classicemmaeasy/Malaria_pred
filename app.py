@@ -1,57 +1,3 @@
-# import streamlit as st
-# import pandas as pd
-# import xgboost as xgb
-# import pickle
-# import os
-
-# # Load the models using pickle (Assuming model_dir is where you saved them)
-# model_dir = 'xgb_models_pickle'  
-# loaded_models = {}
-# for target_column in ['Y1', 'Y2', 'Y3', 'Y4']:  # Replace with your actual target columns
-#     model_file = os.path.join(model_dir, f'xgb_model_{target_column}.pkl')
-#     try:
-#         with open(model_file, 'rb') as f:
-#             model = pickle.load(f)
-#         loaded_models[target_column] = model
-#         print(f"Model for {target_column} loaded from: {model_file}")
-#     except FileNotFoundError:
-#         print(f"Model file for {target_column} not found: {model_file}")
-
-
-
-
-
-# # Streamlit app
-# st.title("XGBoost Model Prediction")
-
-# # Input fields for features (Replace with your actual feature names)
-# feature_names = ['number of household members', 'Number of children 5 and under', 'Number of mosquito bed nets', 'Number of children under mosquito bed net previous night', 'Ideal number of children', 'Husband/partner worked in last 7 days/12 months', 'Cost of treatment of fever', 'Number of days after fever began sought advice or treatment', 'duration of pregnancy', 'proportion of children under 5 and below over the total no of household', 'propotion of ideal children under 5 and below over the no. of ideal children in the household', 'levels  burden children under 5 who slept under mosquito net.', 'level of burden associated with proportion of mosquito net per no. of household.', 'level of burden associated with  proportion of children under mosquito net previous night over ideal children.', 'Household has: electricity', 'Result of the malaria test', 'currently pregnant', 'Main floor material', 'Children under 5 slept under mosquito bed net last night (household questionnaire)', 'Type of mosquito bed net(s) slept under last night', 'Type of cooking fuel', 'Wall Material', 'RELATIONSHIP TO HOUSEHOLD HEAD', 'Respondents Currently Working', 'Literacy', 'Wealth Index']
-# input_data = {}
-# for feature in feature_names:
-#     input_data[feature] = st.number_input(feature)
-
-# # Create a DataFrame from input data
-# input_df = pd.DataFrame([input_data])
-
-# # Predict button
-# if st.button("Predict"):
-#     # Predict for each target variable
-#     predictions = {}
-#     for target_column in loaded_models:
-#         prediction = loaded_models[target_column].predict(xgb.DMatrix(input_df))[0]
-#         predictions[target_column] = prediction
-    
-#     # Find the target variable with the highest prediction value
-#     predicted_target = max(predictions, key=predictions.get)
-    
-#     # Display predictions
-#     st.write("## Predictions:")
-#     # st.write(predictions)
-#     st.write(f"**Predicted target variable: {predicted_target}**")
-
-
-
-
 
 
 import streamlit as st
@@ -162,3 +108,63 @@ if all_valid:  # Proceed only if all inputs are valid
 else:st.write("## Predictions:")
     
 # st.warning("Please ensure all inputs are numerical before predicting.")
+
+
+
+
+
+
+# import streamlit as st
+# import pandas as pd
+# import xgboost as xgb
+# import pickle
+# import os
+
+# # Load the models using pickle (Assuming model_dir is where you saved them)
+# model_dir = 'xgb_models_pickle'  
+# loaded_models = {}
+# for target_column in ['Y1', 'Y2', 'Y3', 'Y4']:  # Replace with your actual target columns
+#     model_file = os.path.join(model_dir, f'xgb_model_{target_column}.pkl')
+#     try:
+#         with open(model_file, 'rb') as f:
+#             model = pickle.load(f)
+#         loaded_models[target_column] = model
+#         print(f"Model for {target_column} loaded from: {model_file}")
+#     except FileNotFoundError:
+#         print(f"Model file for {target_column} not found: {model_file}")
+
+
+
+
+
+# # Streamlit app
+# st.title("XGBoost Model Prediction")
+
+# # Input fields for features (Replace with your actual feature names)
+# feature_names = ['number of household members', 'Number of children 5 and under', 'Number of mosquito bed nets', 'Number of children under mosquito bed net previous night', 'Ideal number of children', 'Husband/partner worked in last 7 days/12 months', 'Cost of treatment of fever', 'Number of days after fever began sought advice or treatment', 'duration of pregnancy', 'proportion of children under 5 and below over the total no of household', 'propotion of ideal children under 5 and below over the no. of ideal children in the household', 'levels  burden children under 5 who slept under mosquito net.', 'level of burden associated with proportion of mosquito net per no. of household.', 'level of burden associated with  proportion of children under mosquito net previous night over ideal children.', 'Household has: electricity', 'Result of the malaria test', 'currently pregnant', 'Main floor material', 'Children under 5 slept under mosquito bed net last night (household questionnaire)', 'Type of mosquito bed net(s) slept under last night', 'Type of cooking fuel', 'Wall Material', 'RELATIONSHIP TO HOUSEHOLD HEAD', 'Respondents Currently Working', 'Literacy', 'Wealth Index']
+# input_data = {}
+# for feature in feature_names:
+#     input_data[feature] = st.number_input(feature)
+
+# # Create a DataFrame from input data
+# input_df = pd.DataFrame([input_data])
+
+# # Predict button
+# if st.button("Predict"):
+#     # Predict for each target variable
+#     predictions = {}
+#     for target_column in loaded_models:
+#         prediction = loaded_models[target_column].predict(xgb.DMatrix(input_df))[0]
+#         predictions[target_column] = prediction
+    
+#     # Find the target variable with the highest prediction value
+#     predicted_target = max(predictions, key=predictions.get)
+    
+#     # Display predictions
+#     st.write("## Predictions:")
+#     # st.write(predictions)
+#     st.write(f"**Predicted target variable: {predicted_target}**")
+
+
+
+
