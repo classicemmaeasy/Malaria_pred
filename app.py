@@ -22,10 +22,10 @@ st.title("Malaria Burden classification")
 
 # Define the mapping for prediction labels
 prediction_mapping = {
-    'Y1': 'Lowest risk to malaria ',
-    'Y2': 'Low risk to malaria',
-    'Y3': 'High risk to malaria',
-    'Y4': 'Highest risk to malaria'
+    'Y1': 'Lowest Malaria burden ',
+    'Y2': 'Low risk to malaria burden',
+    'Y3': 'High risk to malaria burden',
+    'Y4': 'Highest risk to malaria burden'
 }
 
 # Input fields for features (Replace with your actual feature names)
