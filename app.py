@@ -30,7 +30,7 @@ prediction_mapping = {
 
 # Input fields for features (Replace with your actual feature names)
 feature_names = [
-    'number of household members', 
+    'Number of household members', 
     'Number of children 5 and under', 
     'Number of mosquito bed nets', 
     'Number of children under mosquito bed net previous night', 
@@ -38,9 +38,9 @@ feature_names = [
     'Husband/partner worked in last 7 days/12 months', 
     'Cost of treatment of fever', 
     'Number of days after fever began sought advice or treatment', 
-    'duration of pregnancy', 
-    'proportion of children under 5 and below over the total no of household', 
-    'propotion of ideal children under 5 and below over the no. of ideal children in the household', 
+    'Duration of pregnancy', 
+    'Proportion of children under 5 and below over the total no of household', 
+    'Propotion of ideal children under 5 and below over the no. of ideal children in the household', 
     'levels burden children under 5 who slept under mosquito net.', 
     'level of burden associated with proportion of mosquito net per no. of household.', 
     'level of burden associated with proportion of children under mosquito net previous night over ideal children.', 
@@ -52,7 +52,7 @@ feature_names = [
     'Type of mosquito bed net(s) slept under last night', 
     'Type of cooking fuel', 
     'Wall Material', 
-    'RELATIONSHIP TO HOUSEHOLD HEAD', 
+    'Relationship to Household Head', 
     'Respondents Currently Working', 
     'Literacy', 
     'Wealth Index'
